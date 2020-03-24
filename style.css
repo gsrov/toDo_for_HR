@@ -1,0 +1,189 @@
+html {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+    margin: 10px auto;
+    width: 800px;
+    height: 0;
+    
+}
+h2 {
+    margin:5px;
+    font-family: Lobster ;
+}
+#blink-2 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  animation:blur .75s ease-out infinite;
+  text-shadow:text-shadow: 0 0 5px #abc, 0 0 7px #abc;
+}
+
+@keyframes blur{
+  from{
+      text-shadow:0px 0px 10px #fff,
+      0px 0px 10px #fff, 
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #7B96B8,
+      0px 0px 150px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px -10px 100px #7B96B8,
+      0px -10px 100px #7B96B8;}
+}
+
+/* Включите отступ и границу в общую ширину и высоту элемента */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Удалите поля и отступы из списка */
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Стиль элементов списка */
+
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    list-style-type: none;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+    /* сделайте элементы списка просматриваемыми */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* Установите для всех нечетных элементов списка другой цвет (полосы зебры) */
+
+ul li:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+
+/* Более темный фон-цвет при наведении курсора */
+
+ul li:hover {
+    background: #ddd;
+}
+
+
+/* При нажатии на кнопку добавить цвет фона и вычеркнуть текст */
+
+ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+
+/* Добавить отметку "проверено" при нажатии на нее */
+
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+
+/* Стиль кнопки закрытия */
+
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+    border-radius: 20%;
+}
+
+.close:hover {
+    background-color: blue;
+    color: red;
+}
+
+
+/* Стиль заголовка */
+
+.header {
+    background-color: blue;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+}
+
+
+/* Очистить поплавки после заголовка */
+
+.header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Стиль ввода */
+
+input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+}
+
+
+/* Стиль кнопки "Добавить" */
+
+.addBtn {
+    padding: 10px;
+    width: 25%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+}
+
+.addBtn:hover {
+    background-color: #bbb;
+}
